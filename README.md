@@ -32,16 +32,16 @@ Or install it yourself as:
 
 ```ruby
 def add a, b
-  a+b
+  a + b
 end
 
-subtract = ->a, b{a-b}
+subtract = ->a, b{ a - b }
 
 add(4, 5).ᐅ subtract, 15
 # => 6
 
-def divide a,b
-  a/b
+def divide a, b
+  a / b
 end
 
 add(4, 6).ᐅ method(:divide), 50
