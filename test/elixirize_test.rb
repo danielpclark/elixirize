@@ -12,11 +12,11 @@ class ElixirizeTest < Minitest::Test
   def test_it_can_pass_previous_results_to_next_item
     add = ->a, b{a+b}
     subtract = ->a, b{a-b}
-    assert_equal 6, add.(4, 5).ᐅ(subtract, 15)
+    assert_equal -6, add.(4, 5).ᐅ(subtract, 15)
   end
 
   def test_it_takes_procd_method
     add = ->a, b{a+b}
-    assert_equal 5, add.(4, 6).ᐅ(method(:divide), 50)
+    assert_equal 5, add.(40, 60).ᐅ(method(:divide), 20)
   end
 end

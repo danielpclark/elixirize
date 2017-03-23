@@ -7,7 +7,7 @@
 
 # Elixirize
 
-This add the `ᐅ` method to Ruby.  It pipes in the returned value of the left as the last parameter of the
+This adds the `ᐅ` method to Ruby.  It pipes in the returned value of the left as the first parameter of the
 Proc on the right.
 
 In Linux to enter ᐅ you need to type CTRl-SHIFT-U and then 1405 followed by the space or enter key.
@@ -38,13 +38,13 @@ end
 subtract = ->a, b{ a - b }
 
 add(4, 5).ᐅ subtract, 15
-# => 6
+# => -6
 
 def divide a, b
   a / b
 end
 
-add(4, 6).ᐅ method(:divide), 50
+add(40, 60).ᐅ method(:divide), 20
 # => 5
 ```
 
