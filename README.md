@@ -7,9 +7,10 @@
 
 # Elixirize
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/elixirize`. To experiment with that code, run `bin/console` for an interactive prompt.
+This add the `ᐅ` method to Ruby.  It pipes in the returned value of the left as the last parameter of the
+Proc on the right.
 
-TODO: Delete this and the text above, and describe your gem
+In Linux to enter ᐅ you need to type CTRl-SHIFT-U and then 1405 followed by the space or enter key.
 
 ## Installation
 
@@ -29,7 +30,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+def add a, b
+  a+b
+end
+
+subtract = ->a, b{a-b}
+
+add(4, 5).ᐅ subtract, 15
+# => 6
+
+def divide a,b
+  a/b
+end
+
+add(4, 6).ᐅ method(:divide), 50
+# => 5
+```
 
 ## Development
 
