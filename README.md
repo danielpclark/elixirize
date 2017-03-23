@@ -10,7 +10,10 @@
 This adds the `ᐅ` method to Ruby.  It pipes in the returned value of the left as the first parameter of the
 Proc on the right.
 
-In Linux to enter ᐅ you need to type CTRl-SHIFT-U and then 1405 followed by the space or enter key.
+### Unicode ᐅ
+
+* Linux to enter ᐅ you need to type CTRl-SHIFT-U and then 1405 followed by the space or enter key.
+* Mac to enter ᐅ you need to hold the option key while you type 1405 and then release the option key.
 
 ## Installation
 
