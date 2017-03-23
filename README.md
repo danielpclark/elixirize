@@ -12,8 +12,11 @@ Proc on the right.
 
 ### Unicode ᐅ
 
-* Linux to enter ᐅ you need to type CTRl-SHIFT-U and then 1405 followed by the space or enter key.
-* Mac to enter ᐅ you need to hold the option key while you type 1405 and then release the option key.
+To enter ᐅ you need to:
+
+* **Linux:** type **CTRl-SHIFT-U** and then **1405** followed by the space or enter key.
+* **Mac:**  hold the option key while you type **1405** and then release the option key.
+* **VIM:** press **CTRL-v** then **SHIFT-U** then **1405** and hit enter.
 
 ## Installation
 
