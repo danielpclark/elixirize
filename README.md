@@ -8,7 +8,7 @@
 # Elixirize
 
 This adds the `ᐅ` method to Ruby.  It pipes in the returned value of the left as the first parameter of the
-Proc on the right.
+Proc _(or anything with `:call` defined)_ on the right.
 
 ### Unicode ᐅ
 
@@ -55,7 +55,9 @@ add(40, 60).ᐅ method(:divide), 20
 # => 5
 ```
 
-For fun I've also aliased λ to lambda; unicode 03bb.
+## Goodies
+
+For fun I've also aliased **λ** to **lambda**; unicode **03bb**.
 
 Since Ruby is designed largely to call methods on the object that was returned
 I've written the `~` method on `Symbol` to allow method calls on the returned
