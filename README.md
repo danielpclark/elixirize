@@ -79,7 +79,7 @@ val
 You can mix both behaviors without any issue.
 
 This may seem counter intuitive as it's the same thing as just calling the method
-on the object, but consider this a noticable refactoring step.  If you're designing
+on the object, but consider this a noticeable refactoring step.  If you're designing
 a project in a manner where you want results piped in as the first parameter then
 the tilde-symbol will be your TODO reminder to convert/refactor how your code base is
 implemented.
