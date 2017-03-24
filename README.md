@@ -14,9 +14,10 @@ Proc on the right.
 
 To enter ᐅ you need to:
 
-* **Linux:** type **CTRl-SHIFT-U** and then **1405** followed by the space or enter key.
-* **Mac:**  hold the option key while you type **1405** and then release the option key.
-* **VIM:** press **CTRL-v** then **SHIFT-U** then **1405** and hit enter.
+* **Linux:** type **CTRl-SHIFT-U** and then **1405** followed by the **Space** or **Enter** key.
+* **Mac:**  hold the **Option** key while you type **1405** and then release the **Option** key.
+* **VIM:** press **CTRL-v** then **SHIFT-U** then **1405** and hit **Enter**.
+* **Emacs:** press **CTRL-x** then **8** then **Enter** and type **1405** and hit **Enter**.
 
 ## Installation
 
