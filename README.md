@@ -55,6 +55,33 @@ add(40, 60).ᐅ method(:divide), 20
 # => 5
 ```
 
+For fun I've also aliased λ to lambda; unicode 03bb.
+
+Since Ruby is designed largely to call methods on the object that was returned
+I've written the `~` method on `Symbol` to allow method calls on the returned
+object rather than only being the first parameter passed in.
+
+**Example:**
+
+```ruby
+s = "a b c d"
+val = s.
+  ᐅ(~:split, " ").
+  ᐅ(~:join, "-").
+  ᐅ ~:capitalize
+
+val
+# => "A-b-c-d"
+```
+
+You can mix both behaviors without any issue.
+
+This may seem counter intuitive as it's the same thing as just calling the method
+on the object, but consider this a noticable refactoring step.  If you're designing
+a project in a manner where you want results piped in as the first parameter then
+the tilde-Symbol will be your TODO reminder to convert/refactor how your code base is
+implemented.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
