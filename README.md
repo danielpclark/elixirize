@@ -55,9 +55,7 @@ add(40, 60).ᐅ method(:divide), 20
 # => 5
 ```
 
-## Goodies
-
-For fun I've also aliased **λ** to **lambda**; unicode **03bb**.
+## Extra
 
 Since Ruby is designed largely to call methods on the object that was returned
 I've written the `~` method on `Symbol` to allow method calls on the returned

@@ -12,7 +12,7 @@ module Elixirize
 
   ::Symbol.class_eval do
     def ~
-      λ {|obj, *args| obj.send self, *args }
+      λ {|obj, *args| obj.public_send self, *args }
     end
   end
 end
