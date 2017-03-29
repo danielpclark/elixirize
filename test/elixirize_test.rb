@@ -28,12 +28,21 @@ class ElixirizeTest < Minitest::Test
     assert_equal ["a", "b", "c", "d"], val
   end
 
-  def test_chain_example
+  def test_chain_example_with_tilde
     s = "a b c d"
     val = s.
       ᐅ(~:split, " ").
       ᐅ(~:join, "-").
       ᐅ ~:capitalize
+    assert_equal "A-b-c-d", val
+  end
+
+  def test_chain_example_with_to_proc
+    s = "a b c d"
+    val = s.
+      ᐅ(:split.to_proc, " ").
+      ᐅ(:join.to_proc, "-").
+      ᐅ :capitalize.to_proc
     assert_equal "A-b-c-d", val
   end
 end
