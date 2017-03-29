@@ -11,8 +11,6 @@ module Elixirize
   end
 
   ::Symbol.class_eval do
-    def ~
-      λ {|obj, *args| obj.public_send self, *args }
-    end
+    alias_method :~, :to_proc
   end
 end
