@@ -45,4 +45,30 @@ class ElixirizeTest < Minitest::Test
       ᐅ :capitalize.to_proc
     assert_equal "A-b-c-d", val
   end
+
+  def test_multiple_arguments_on_proc
+    result = "passes".
+      ᐅ ~:gsub, 's', 'z'
+    assert_equal "pazzez", result
+
+    result = "passes".
+      ᐅ :gsub.to_proc, 's', 'z'
+    assert_equal "pazzez", result
+  end
+
+  def test_pipe_method_with_block
+    sentance = "The rain in Spain stays mainly in the plain"
+    ai = lambda {|s| s['ai']}
+    result = sentance.
+      ᐅ(~:split).
+      ᐅ ~:select, &ai
+    assert_equal ["rain", "Spain", "mainly", "plain"], result
+
+    aie = lambda {|enum| enum.each(&ai) }
+    result2 = sentance.
+      ᐅ(~:split).
+      ᐅ(~:select).
+      ᐅ aie
+    assert_equal ["rain", "Spain", "mainly", "plain"], result2
+  end
 end

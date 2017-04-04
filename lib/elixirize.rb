@@ -3,8 +3,8 @@ require "elixirize/version"
 module Elixirize
   ::Object.class_eval do
 
-    def ᐅ other, *args
-      other.call(self, *args)
+    def ᐅ other, *args, &block
+      other.call(self, *args, &block)
     end
 
     alias_method :λ, :lambda
