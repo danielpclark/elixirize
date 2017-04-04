@@ -58,13 +58,13 @@ class ElixirizeTest < Minitest::Test
 
   def test_pipe_method_with_block
     sentance = "The rain in Spain stays mainly in the plain"
-    ai = lambda {|s| s['ai']}
+    ai = ->(s) { s['ai']}
     result = sentance.
       ᐅ(~:split).
       ᐅ ~:select, &ai
     assert_equal ["rain", "Spain", "mainly", "plain"], result
 
-    aie = lambda {|enum| enum.each(&ai) }
+    aie = ->(enum) { enum.each(&ai) }
     result2 = sentance.
       ᐅ(~:split).
       ᐅ(~:select).

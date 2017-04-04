@@ -9,6 +9,6 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "**.rb"
+  - "lib/elixirize.rb"
 exclude_paths:
 - test/
